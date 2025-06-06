@@ -15,6 +15,7 @@ export class MysqlEtablissementRepository implements EtablissementRepository {
       config?.password || process.env.DB_PASSWORD!,
       {
         host: config?.host || process.env.DB_SERVER!,
+        port: config?.port || process.env.PORT,
         dialect: 'mysql',
         logging: true,
       }
